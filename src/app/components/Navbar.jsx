@@ -11,6 +11,9 @@ export default function Navbar() {
         <div className="space-x-4">
             <Link href="/artworks" className={pathname === '/artworks' ? 'underline' : ''}>Artworks</Link>
             <Link href="/about" className={pathname === '/about' ? 'underline' : ''}>About</Link>
+            <button className="snipcart-checkout relative">Checkout<span className="snipcart-items-count absolute -top-2 -right-2 text-xs px-1 rounded-full" />
+            </button>
+
         </div>
         </nav>
     )

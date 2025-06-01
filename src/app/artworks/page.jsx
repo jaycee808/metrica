@@ -45,8 +45,20 @@ async function getArtworks() {
                 <h2 className="text-2xl font-semibold tracking-tight">{artwork.title}</h2>
                 <h3 className="text-sm tracking-tight text-gray-600">{artwork.tagline}</h3>
                 <p className="text-base text-black leading-snug">{artwork.description}</p>
-                <p className="text-sm tracking-widest text-gray-600"> {artwork.dimensions}</p>
+                <p className="text-sm tracking-widest text-gray-600">{artwork.dimensions}</p>
                 <span className="text-lg font-bold tracking-tight">£{artwork.price}</span>
+
+                <button
+                className="snipcart-add-item bg-black text-white px-4 py-2 mt-2 w-fit"
+                data-item-id={artwork.productId || artwork._id}
+                data-item-price={artwork.price}
+                data-item-url="/artworks"
+                data-item-description={artwork.tagline || artwork.description}
+                data-item-image={artwork.image.asset.url}
+                data-item-name={artwork.title}
+                >
+                Add to Cart
+                </button>
             </div>
             ))}
         </div>
