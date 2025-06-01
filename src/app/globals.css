@@ -1,12 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @import "tailwindcss";
 
 :root {
   --light: #FEFEFE;
   --dark: #121212;
+  --snipcart-font-family: 'Cal Sans', 'Inter', sans-serif;
 }
 
 body {
   background: var(--light);
   color: var(--dark);
   font-family: Helvetica, sans-serif;
+}
+
+.font-heading {
+  font-family: 'Cal Sans', 'Inter', sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+.snipcart__font--secondary,
+.snipcart__font--subtitle,
+.snipcart-cart__header-title {
+  font-family: 'Cal Sans', 'Inter', sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1.2rem;
+}
+
+.snipcart-item-line {
+  font-family: 'Inter', sans-serif !important;
+  letter-spacing: 0.05em;
+  font-size: 1.2rem;
 }

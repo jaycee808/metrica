@@ -30,7 +30,7 @@ async function getArtworks() {
 
     return (
         <main className="px-8 py-16">
-        <h1 className="text-4xl md:text-6xl font-bold uppercase mb-12 tracking-tight">Artworks</h1>
+        <h1 className="text-6xl font-bold uppercase mb-12 tracking-tight font-heading">Artworks</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {artworks.map((artwork) => (
             <div key={artwork._id} className="flex flex-col gap-4 pt-4">
@@ -42,14 +42,14 @@ async function getArtworks() {
                     className="object-cover"
                 />
                 </div>
-                <h2 className="text-2xl font-semibold tracking-tight">{artwork.title}</h2>
-                <h3 className="text-sm tracking-tight text-gray-600">{artwork.tagline}</h3>
-                <p className="text-base text-black leading-snug">{artwork.description}</p>
-                <p className="text-sm tracking-widest text-gray-600">{artwork.dimensions}</p>
-                <span className="text-lg font-bold tracking-tight">£{artwork.price}</span>
+                <h2 className="text-3xl font-semibold tracking-tight font-heading">{artwork.title}</h2>
+                <h3 className="text-sm tracking-tight text-gray-600 font-inter">{artwork.tagline}</h3>
+                <p className="text-base text-black font-body">{artwork.description}</p>
+                <p className="text-sm tracking-widest text-gray-600 font-body">{artwork.dimensions}</p>
+                <span className="text-xl font-bold tracking-widest font-heading">£{artwork.price}</span>
 
                 <button
-                className="snipcart-add-item bg-black text-white px-4 py-2 mt-2 w-fit"
+                className="snipcart-add-item bg-black text-white px-4 py-2 mt-2 w-fit text-xl font-heading uppercase"
                 data-item-id={artwork.productId || artwork._id}
                 data-item-price={artwork.price}
                 data-item-url="/artworks"

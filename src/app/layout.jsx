@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
           href="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css"
         />
       </head>
-      <body className="bg-black text-white font-sans">
+      <body className="bg-black text-white">
         <Navbar />
         <main className="px-6 py-10 max-w-5xl mx-auto">{children}</main>
         <Footer />
