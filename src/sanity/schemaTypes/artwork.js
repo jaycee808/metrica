@@ -4,6 +4,7 @@ export default {
     type: 'document',
     fields: [
         { name: 'title', title: 'Title', type: 'string' },
+        { name: 'tagline', title: 'Tagline', type: 'string'},
         { name: 'slug', title: 'Slug', type: 'slug', options: { source: 'title', maxLength: 96 } },
         {
         name: 'image',
