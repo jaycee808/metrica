@@ -23,6 +23,12 @@ export default {
         { name: 'description', title: 'Description', type: 'text' },
         { name: 'price', title: 'Price (£)', type: 'number' },
         { name: 'productId', title: 'Product ID', type: 'string' },
-        { name: 'dimensions', title: 'Dimensions', type: 'string' }
+        { name: 'dimensions', title: 'Dimensions', type: 'string' },
+        {
+        name: 'collection',
+        title: 'Collection',
+        type: 'reference',
+        to: [{ type: 'collection' }]
+        }
     ]
 }
