@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { artworkClient } from '@/sanity/lib/client'
+import { artworkClient } from '@/sanity/lib/queries/artworkClient'
 import { groupBy } from 'lodash'
 
 export const revalidate = 60
@@ -23,7 +23,9 @@ async function getArtworks() {
         },
         collection->{
             title,
-            slug
+            slug,
+            tagline,
+            description
         }
     }`
 
