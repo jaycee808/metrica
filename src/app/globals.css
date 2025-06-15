@@ -11,7 +11,6 @@
 body {
   background: var(--light);
   color: var(--dark);
-  font-family: Helvetica, sans-serif;
 }
 
 .font-heading {
