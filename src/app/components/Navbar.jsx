@@ -14,11 +14,11 @@ export default function Navbar() {
     return (
         <nav className="w-full border-b border-[var(--mid-gray)] bg-[var(--light)] text-[var(--dark)]">
         {/* Top Row: Logo & Cart */}
-        <div className="flex justify-between px-6 py-4 max-w-7xl mx-auto">
+        <div className="flex justify-between px-4 md:px-6 py-4 max-w-7xl mx-auto">
             {/* Logo */}
-            <Link href="/" className="block w-[160px] md:w-[400px]">
+            <Link href="/" className="block w-[260px] md:w-[400px]">
             <Image
-                src="/metrica-logo.png"
+                src="/logo/logo-metrica.png"
                 alt="Metrica Logo"
                 width={400}
                 height={100}
@@ -26,6 +26,7 @@ export default function Navbar() {
                 priority
             />
             </Link>
+            {/* <Link href="/" className="text-8xl font-bold tracking-wide uppercase font-sub-heading">Metrica</Link> */}
 
             {/* Snipcart Cart with Lucide Icon */}
             <button
@@ -38,8 +39,8 @@ export default function Navbar() {
         </div>
 
         {/* Bottom Row: Navigation Links */}
-        <div className="px-6 py-4 max-w-7xl mx-auto">
-            <div className="flex justify-start gap-8 font-sub-heading sm:text-xl md:text-2xl uppercase flex-wrap">
+        <div className="px-4 md:px-6 py-4 max-w-7xl mx-auto">
+            <div className="flex justify-start gap-8 font-sub-heading text-xl md:text-2xl uppercase flex-wrap">
             <Link href="/collections" className={navLinkClass('/collections')}>Collections</Link>
             <Link href="/artworks" className={navLinkClass('/artworks')}>Artworks</Link>
             <Link href="/about" className={navLinkClass('/about')}>About</Link>
