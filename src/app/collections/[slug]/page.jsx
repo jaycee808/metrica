@@ -13,21 +13,33 @@ export default async function CollectionPage({ params }) {
     if (!collection) return notFound()
 
     return (
-        <main className="px-8 md:px-16 py-24 max-w-7xl mx-auto">
-        {/* Collection Header */}
-        <section className="mb-20">
-            <h1 className="text-7xl md:text-8xl font-heading font-bold leading-none tracking-tighter uppercase mb-6">
-            {collection.title}
+        <main className="bg-[var(--white)] text-[var(--black)] px-6 md:px-10 py-24 max-w-7xl mx-auto">
+        {/* Breadcrumb */}
+        <nav className="text-xs uppercase tracking-wider font-sub-heading mb-6 text-[var(--blue-purple)]">
+            <Link href="/collections" className="hover:underline">Collections</Link> /{' '}
+            <span className="text-[var(--black)]">{collection.title}</span>
+        </nav>
+
+        {/* Header: 2-column layout */}
+        <section className="grid md:grid-cols-3 gap-12 mb-24">
+            <div>
+            <h1 className="text-4xl md:text-6xl font-heading font-bold uppercase tracking-tight leading-tight">
+                {collection.title}
             </h1>
-            <p className="text-xl text-gray-700 font-body italic mb-4 tracking-tight">{collection.tagline}</p>
-            <p className="text-lg font-body max-w-3xl leading-relaxed">{collection.description}</p>
+            </div>
+
+            <div className="md:col-span-2 space-y-6">
+            <p className="italic text-lg text-[var(--gray-blue)] font-body">{collection.tagline}</p>
+            <p className="text-base font-body leading-relaxed max-w-3xl">{collection.description}</p>
+            </div>
         </section>
 
         {/* Artwork Grid */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <section className="grid md:grid-cols-2 gap-16">
             {collection.artworks.map((artwork) => (
             <div key={artwork._id} className="flex flex-col gap-4">
-                <div className="relative w-full aspect-[4/5] bg-gray-100">
+                {/* Image */}
+                <div className="relative w-full aspect-[4/5] bg-[var(--light-gray)] rounded overflow-hidden">
                 <Image
                     src={artwork.image.asset.url}
                     alt={artwork.image.alt || artwork.title}
@@ -36,24 +48,29 @@ export default async function CollectionPage({ params }) {
                 />
                 </div>
 
-                <h2 className="text-3xl font-heading font-semibold tracking-tight uppercase">{artwork.title}</h2>
+                {/* Title + Metadata */}
+                <h2 className="text-2xl font-heading font-semibold uppercase tracking-tight">{artwork.title}</h2>
+
                 {artwork.tagline && (
-                <p className="text-sm text-gray-600 font-inter tracking-wide">{artwork.tagline}</p>
+                <p className="text-sm text-[var(--gray-blue)] font-body tracking-wide italic">{artwork.tagline}</p>
                 )}
+
                 {artwork.description && (
                 <p className="text-base font-body leading-relaxed">{artwork.description}</p>
                 )}
+
                 {artwork.dimensions && (
-                <p className="text-xs tracking-widest text-gray-600 font-body">{artwork.dimensions}</p>
+                <p className="text-xs tracking-widest text-[var(--gray-blue)] font-body">{artwork.dimensions}</p>
                 )}
 
-                <div className="flex items-center justify-between mt-2">
+                {/* Price + CTA */}
+                <div className="flex items-center justify-between mt-4">
                 <span className="text-xl font-heading font-bold tracking-widest">
                     £{artwork.price}
                 </span>
 
                 <button
-                    className="snipcart-add-item bg-black text-white px-4 py-2 text-sm uppercase tracking-widest font-heading"
+                    className="snipcart-add-item bg-[var(--pink)] text-[var(--white)] px-5 py-2 text-sm uppercase tracking-widest font-heading hover:opacity-90"
                     data-item-id={artwork.productId || artwork._id}
                     data-item-price={artwork.price}
                     data-item-url={`/collections/${slug}`}
@@ -67,6 +84,16 @@ export default async function CollectionPage({ params }) {
             </div>
             ))}
         </section>
+        
+        {/* Back to Collections */}
+        <div className="mt-24 text-center">
+        <Link
+            href="/collections"
+            className="inline-block font-sub-heading text-sm md:text-base uppercase tracking-wide border-b-2 border-[var(--black)] hover:opacity-80 transition-opacity"
+        >
+            ← Back to Collections
+        </Link>
+        </div>
         </main>
     )
 }

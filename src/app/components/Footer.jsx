@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Footer() {
     return (
-        <footer className="bg-[var(--navy)] text-[var(--white)] py-24 font-heading">
+        <footer className="bg-[var(--black)] text-[var(--white)] py-24 font-heading">
         <div className="max-w-full grid gap-12 md:gap-36 md:grid-cols-3 text-sm md:text-base">
             {/* Left: Studio Info */}
             <div className="px-8 md:px-32">
