@@ -18,7 +18,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="block w-[220px] md:w-[400px]">
             <Image
-                src="/logo/metrica-vibe-logo-1.png"
+                src="/logo/metrica-vibe-logo-6.png"
                 alt="Metrica Logo"
                 width={280}
                 height={60}
