@@ -17,8 +17,8 @@ export default function Footer() {
             {/* Center: Navigation */}
             <div className="flex flex-col space-y-3 uppercase tracking-wide font-sub-heading text-base px-8 md:px-18">
             <Link href="/collections" className="hover:underline">Collections</Link>
-            <Link href="/artworks" className="hover:underline">Artworks</Link>
-            <Link href="/about" className="hover:underline">About</Link>
+            <Link href="/gallery" className="hover:underline">Gallery</Link>
+            <Link href="/contact" className="hover:underline">Contact</Link>
             </div>
 
             {/* Right: Legal */}

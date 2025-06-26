@@ -13,25 +13,25 @@ export default async function CollectionsPage() {
     const collections = await artworkClient.fetch(getCollections)
 
     return (
-        <main className="bg-[var(--white)] text-[var(--black)] px-6 md:px-10 py-24 max-w-7xl mx-auto">
+        <main>
         {/* Page Title */}
-        <header className="mb-32">
+        <header className="mb-16 bg-[var(--light-gray)] py-8">
             {/* Breadcrumb Nav */}
-            <nav className="text-xs uppercase tracking-wider font-sub-heading mb-4 text-[var(--blue-purple)]">
-            <Link href="/" className="hover:underline]">Home</Link> / <span className="text-[var(--black)]">Collections</span>
+            <nav className="text-xs uppercase tracking-wider font-sub-heading mb-4 text-[var(--blue-purple)] px-6 md:px-24">
+            <Link href="/" className="hover:underline]">Home</Link> <span className="text-[var(--black)]"> / </span><span className="text-[var(--black)]">Collections</span>
             </nav>
-            <h1 className="text-4xl md:text-7xl font-heading font-bold uppercase tracking-tight leading-none">
+            <h1 className="text-6xl md:text-7xl font-sub-heading font-bold uppercase tracking-tight leading-none text-[var(--black)] px-6 md:px-24 mb-8">
             Collections
             </h1>
         </header>
 
         {/* Collection Sections */}
-        <div className="space-y-36">
+        <div className="space-y-32 px-6 md:px-10 max-w-7xl mx-auto">
             {collections.map((collection) => {
             const previewArtworks = getRandomArtworks(collection.artworks, 2)
 
             return (
-                <section key={collection._id} className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start border-t pt-16">
+                <section key={collection._id} className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start border-b py-12 pt-16">
                 {/* Column 1: Title */}
                 <div>
                     <Link href={`/collections/${collection.slug.current}`}>

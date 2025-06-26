@@ -36,7 +36,7 @@ export default function Home() {
           alt="Metrica Hero"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-left md:object-center"
         />
         <div className="absolute bottom-10 right-6 md:bottom-16 md:right-16 z-10">
           <h1 className="text-5xl md:text-7xl font-heading tracking-tight leading-none uppercase bg-[var(--white)] px-4 py-2">
@@ -56,7 +56,7 @@ export default function Home() {
       <section className="bg-[var(--light-gray)] px-6 md:px-10 py-32">
         <div className="max-w-6xl mx-auto space-y-20">
           {/* Heading */}
-          <div className="text-4xl md:text-5xl font-heading uppercase tracking-tight">
+          <div className="text-5xl md:text-8xl font-sub-heading uppercase tracking-tight">
             Collections
           </div>
 

@@ -18,7 +18,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="block w-[220px] md:w-[400px]">
             <Image
-                src="/logo/metrica-vibe-logo-6.png"
+                src="/logo/metrica-vibe-logo-1.png"
                 alt="Metrica Logo"
                 width={280}
                 height={60}
@@ -41,8 +41,9 @@ export default function Navbar() {
         <div className="px-2 md:px-28 pt-6 pb-20">
             <div className="flex gap-8 font-sub-heading text-lg md:text-xl uppercase flex-wrap">
             <Link href="/collections" className={navLinkClass('/collections')}>Collections</Link>
-            <Link href="/artworks" className={navLinkClass('/artworks')}>Artworks</Link>
-            <Link href="/about" className={navLinkClass('/about')}>About</Link>
+            <Link href="/gallery" className={navLinkClass('/gallery')}>Gallery</Link>
+            <Link href="/contact" className={navLinkClass('/contact')}>Contact</Link>
+            {/* <Link href="/about" className={navLinkClass('/about')}>About</Link> */}
             </div>
         </div>
         </nav>
