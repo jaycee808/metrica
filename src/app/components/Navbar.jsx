@@ -12,35 +12,34 @@ export default function Navbar() {
         `${pathname === path ? 'underline' : ''} hover:opacity-80 transition-opacity`
 
     return (
-        <nav className="w-full border-b border-[var(--mid-gray)] bg-[var(--light)] text-[var(--dark)]">
-        {/* Top Row: Logo & Cart */}
-        <div className="flex justify-between px-4 md:px-6 py-4 max-w-7xl mx-auto">
+        <nav className="w-full bg-[var(--white)] text-[var(--black)]">
+        {/* Top Line: Logo & Cart */}
+        <div className="flex justify-between items-center border-b border-[var(--mid-gray)] ml-2 mr-4 md:px-26 py-8">
             {/* Logo */}
-            <Link href="/" className="block w-[260px] md:w-[400px]">
+            <Link href="/" className="block w-[220px] md:w-[400px]">
             <Image
-                src="/logo/logo-metrica.png"
+                src="/logo/metrica-vibe-logo-6.png"
                 alt="Metrica Logo"
-                width={400}
-                height={100}
-                className="w-full h-auto"
+                width={280}
+                height={60}
+                className="h-auto space-y-20"
                 priority
             />
             </Link>
-            {/* <Link href="/" className="text-8xl font-bold tracking-wide uppercase font-sub-heading">Metrica</Link> */}
 
-            {/* Snipcart Cart with Lucide Icon */}
+            {/* Cart */}
             <button
             className="snipcart-checkout relative font-sub-heading text-lg uppercase"
             aria-label="Checkout"
             >
             <ShoppingCart className="w-6 h-6" />
-            <span className="snipcart-items-count absolute top-6 -right-3 text-xs bg-[var(--dark)] text-[var(--light)] px-1 rounded-full" />
+            <span className="snipcart-items-count absolute -top-2 -right-3 text-xs bg-[var(--pink)] text-[var(--white)] px-1 rounded-full" />
             </button>
         </div>
 
-        {/* Bottom Row: Navigation Links */}
-        <div className="px-4 md:px-6 py-4 max-w-7xl mx-auto">
-            <div className="flex justify-start gap-8 font-sub-heading text-xl md:text-2xl uppercase flex-wrap">
+        {/* Bottom Line: Navigation */}
+        <div className="px-2 md:px-28 pt-6 pb-20">
+            <div className="flex gap-8 font-sub-heading text-lg md:text-xl uppercase flex-wrap">
             <Link href="/collections" className={navLinkClass('/collections')}>Collections</Link>
             <Link href="/artworks" className={navLinkClass('/artworks')}>Artworks</Link>
             <Link href="/about" className={navLinkClass('/about')}>About</Link>
