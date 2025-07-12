@@ -71,7 +71,7 @@ export default function Home() {
             </div>
             <div className="text-left">
               <p className="text-3xl font-heading uppercase heading-image">
-                Form. Tension. Presence.
+                Form. Texture. Emotion.
               </p>
               <div className="w-12 h-[2px] bg-[var(--navy)] mt-4"></div>
             </div>
