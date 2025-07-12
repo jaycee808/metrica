@@ -16,7 +16,7 @@ export default function Navbar() {
         {/* Top Line: Logo & Cart */}
         <div className="flex justify-between items-center border-b border-[var(--mid-gray)] ml-2 mr-4 md:px-26 py-8">
             {/* Logo */}
-            <Link href="/" className="block w-[220px] md:w-[400px]">
+            {/* <Link href="/" className="block w-[220px] md:w-[400px]">
             <Image
                 src="/logo/metrica-vibe-logo-6.png"
                 alt="Metrica Logo"
@@ -25,8 +25,12 @@ export default function Navbar() {
                 className="h-auto space-y-20"
                 priority
             />
-            </Link>
+            </Link> */}
 
+            {/* Logo */}
+            <Link href="/" className="block text-5xl md:text-8xl font-heading uppercase">
+                <h1 className="text-logo-image">Metrica</h1>
+            </Link>
             {/* Cart */}
             <button
             className="snipcart-checkout relative font-sub-heading text-lg uppercase"

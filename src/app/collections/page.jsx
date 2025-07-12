@@ -35,7 +35,7 @@ export default async function CollectionsPage() {
                 {/* Column 1: Title */}
                 <div>
                     <Link href={`/collections/${collection.slug.current}`}>
-                    <h2 className="text-3xl md:text-4xl font-heading uppercase font-bold tracking-tight hover:underline transition-opacity">
+                    <h2 className="text-3xl md:text-4xl font-heading uppercase font-bold tracking-tight hover:underline transition-opacity text-[var(--black)]">
                         {collection.title}
                     </h2>
                     </Link>
@@ -47,7 +47,7 @@ export default async function CollectionsPage() {
                     <p>{collection.description}</p>
                     <Link
                     href={`/collections/${collection.slug.current}`}
-                    className="inline-block font-sub-heading text-sm uppercase tracking-wider mt-4 border-b-2 border-[var(--gray-blue)] hover:opacity-80 transition-opacity text-[var(--pink)]"
+                    className="inline-block font-sub-heading text-sm uppercase tracking-wider mt-4 border-b-2 border-[var(--pink)] hover:opacity-80 transition-opacity text-[var(--black)]"
                     >
                     View Full Collection →
                     </Link>
