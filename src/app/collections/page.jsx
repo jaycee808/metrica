@@ -17,8 +17,8 @@ export default async function CollectionsPage() {
         {/* Page Title */}
         <header className="mb-16 bg-[var(--light-gray)] py-8">
             {/* Breadcrumb Nav */}
-            <nav className="text-xs uppercase tracking-wider font-sub-heading mb-4 text-[var(--blue-purple)] px-6 md:px-24">
-            <Link href="/" className="hover:underline]">Home</Link> <span className="text-[var(--black)]"> / </span><span className="text-[var(--black)]">Collections</span>
+            <nav className="text-xs uppercase tracking-wider font-sub-heading mb-4 text-[var(--navy)] px-6 md:px-24">
+            <Link href="/" className="hover:underline]">METRICA</Link> <span className="text-[var(--black)]"> / </span><span className="text-[var(--blue-purple)]">Collections</span>
             </nav>
             <h1 className="text-6xl md:text-7xl font-sub-heading font-bold uppercase tracking-tight leading-none text-[var(--black)] px-6 md:px-24 mb-8">
             Collections

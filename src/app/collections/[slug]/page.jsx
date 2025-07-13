@@ -13,32 +13,48 @@ export default async function CollectionPage({ params }) {
     if (!collection) return notFound()
 
     return (
-        <main className="bg-[var(--white)] text-[var(--black)] px-6 md:px-10 py-24 max-w-7xl mx-auto">
-        {/* Breadcrumb */}
-        <nav className="text-xs uppercase tracking-wider font-sub-heading mb-6 text-[var(--blue-purple)]">
-            <Link href="/collections" className="hover:underline">Collections</Link> /{' '}
-            <span className="text-[var(--black)]">{collection.title}</span>
-        </nav>
+        <main className="bg-[var(--white)]">
+        {/* Page Title Header */}
+        <header className="mb-16 bg-[var(--light-gray)] py-8">
+            {/* Breadcrumb Nav */}
+            <nav className="text-xs uppercase tracking-wider font-sub-heading mb-4 text-[var(--navy)] px-6 md:px-24">
+            <Link href="/" className="hover:underline">Metrica</Link>{' '}
+            <span className="text-[var(--black)]"> / </span>
+            <Link href="/collections" className="hover:underline text-[var(--blue-purple)]">Collections</Link>{' '}
+            <span className="text-[var(--black)]"> / </span>
+            <span className="text-[var(--plum)]">{collection.title}</span>
+            </nav>
 
-        {/* Header: 2-column layout */}
-        <section className="grid md:grid-cols-3 gap-12 mb-24">
-            <div>
-            <h1 className="text-4xl md:text-6xl font-heading font-bold uppercase tracking-tight leading-tight">
-                {collection.title}
+            <h1 className="text-6xl md:text-7xl font-sub-heading font-bold uppercase tracking-tight leading-none text-[var(--black)] px-6 md:px-24 mb-8">
+            {collection.title}
             </h1>
+        </header>
+
+        {/* Header - Tagline & Description */}
+        <section className="px-6 md:px-24 mb-24 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-16 items-start">
+            {/* Tagline Block */}
+            <div>
+            <p className="text-3xl font-heading uppercase heading-image">
+                {collection.tagline}
+            </p>
+            <div className="w-12 h-[2px] bg-[var(--navy)] mt-4"></div>
             </div>
 
-            <div className="md:col-span-2 space-y-6">
-            <p className="italic text-lg text-[var(--gray-blue)] font-body">{collection.tagline}</p>
-            <p className="text-base font-body leading-relaxed max-w-3xl">{collection.description}</p>
+            {/* Description Block */}
+            <div>
+            <p className="text-base font-body leading-relaxed">
+                {collection.description}
+            </p>
             </div>
+        </div>
         </section>
 
+
         {/* Artwork Grid */}
-        <section className="grid md:grid-cols-2 gap-16">
+        <section className="grid md:grid-cols-2 gap-16 px-6 md:px-24 max-w-7xl mx-auto">
             {collection.artworks.map((artwork) => (
             <div key={artwork._id} className="flex flex-col gap-4">
-                {/* Image */}
                 <div className="relative w-full aspect-[4/5] bg-[var(--light-gray)] rounded overflow-hidden">
                 <Image
                     src={artwork.image.asset.url}
@@ -48,7 +64,6 @@ export default async function CollectionPage({ params }) {
                 />
                 </div>
 
-                {/* Title + Metadata */}
                 <h2 className="text-2xl font-heading font-semibold uppercase tracking-tight">{artwork.title}</h2>
 
                 {artwork.tagline && (
@@ -63,7 +78,6 @@ export default async function CollectionPage({ params }) {
                 <p className="text-xs tracking-widest text-[var(--gray-blue)] font-body">{artwork.dimensions}</p>
                 )}
 
-                {/* Price + CTA */}
                 <div className="flex items-center justify-between mt-4">
                 <span className="text-xl font-heading font-bold tracking-widest">
                     £{artwork.price}
@@ -84,15 +98,15 @@ export default async function CollectionPage({ params }) {
             </div>
             ))}
         </section>
-        
+
         {/* Back to Collections */}
-        <div className="mt-24 text-center">
-        <Link
+        <div className="m-24 text-center px-6 md:px-24">
+            <Link
             href="/collections"
             className="inline-block font-sub-heading text-sm md:text-base uppercase tracking-wide border-b-2 border-[var(--black)] hover:opacity-80 transition-opacity"
-        >
+            >
             ← Back to Collections
-        </Link>
+            </Link>
         </div>
         </main>
     )

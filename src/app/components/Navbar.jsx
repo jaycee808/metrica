@@ -14,7 +14,7 @@ export default function Navbar() {
     return (
         <nav className="w-full bg-[var(--white)] text-[var(--black)]">
         {/* Top Line: Logo & Cart */}
-        <div className="flex justify-between items-center border-b border-[var(--mid-gray)] ml-2 mr-4 md:px-26 py-8">
+        <div className="flex justify-between items-center border-b border-[var(--mid-gray)] ml-4 mr-4 md:mr-8 py-4">
             {/* Logo */}
             {/* <Link href="/" className="block w-[220px] md:w-[400px]">
             <Image
@@ -28,21 +28,21 @@ export default function Navbar() {
             </Link> */}
 
             {/* Logo */}
-            <Link href="/" className="block text-5xl md:text-8xl font-heading uppercase">
+            <Link href="/" className="block text-4xl md:text-8xl font-heading uppercase">
                 <h1 className="text-logo-image">Metrica</h1>
             </Link>
             {/* Cart */}
             <button
-            className="snipcart-checkout relative font-sub-heading text-lg uppercase"
+            className="snipcart-checkout relative font-sub-heading text-xl uppercase px-4"
             aria-label="Checkout"
             >
             <ShoppingCart className="w-6 h-6" />
-            <span className="snipcart-items-count absolute -top-2 -right-3 text-xs bg-[var(--pink)] text-[var(--white)] px-1 rounded-full" />
+            <span className="snipcart-items-count absolute -top-2 right-1 text-xs bg-[var(--pink)] text-[var(--white)] px-1 rounded-full" />
             </button>
         </div>
 
         {/* Bottom Line: Navigation */}
-        <div className="px-2 md:px-28 pt-6 pb-20">
+        <div className="px-4 pt-4 pb-20">
             <div className="flex gap-8 font-sub-heading text-lg md:text-xl uppercase flex-wrap">
             <Link href="/collections" className={navLinkClass('/collections')}>Collections</Link>
             <Link href="/gallery" className={navLinkClass('/gallery')}>Gallery</Link>
