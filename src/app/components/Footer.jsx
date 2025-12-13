@@ -28,6 +28,18 @@ export default function Footer() {
             </p>
             <p className="text-sm leading-relaxed font-body">All rights reserved.</p>
             </div>
+
+            {/* Blue Ink Credit*/}
+            <div className="mt-10 text-center md:text-right uppercase tracking-widest text-xs opacity-80">
+                <Link
+                href="https://www.blueinkstudio.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+                >
+                Designed &amp; Developed by Blue Ink Studio
+                </Link>
+            </div>
         </div>
         </footer>
     )
