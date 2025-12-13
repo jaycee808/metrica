@@ -6,7 +6,8 @@ import { getCollectionBySlug } from '@/sanity/lib/queries/getCollectionBySlug'
 
 export const revalidate = 60
 
-export default async function CollectionPage({ params }) {
+export default async function CollectionPage(props) {
+    const params = await props.params;
     const { slug } = params
     const collection = await artworkClient.fetch(getCollectionBySlug, { slug })
 
